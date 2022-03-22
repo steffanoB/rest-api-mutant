@@ -224,7 +224,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647950920436-2022-03-22T12:08:40.436Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.getPost",
               "Runtime": "nodejs14.x",
@@ -255,7 +255,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647950920436-2022-03-22T12:08:40.436Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.createPost",
               "Runtime": "nodejs14.x",
@@ -286,7 +286,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647950920436-2022-03-22T12:08:40.436Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.updatePost",
               "Runtime": "nodejs14.x",
@@ -317,7 +317,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647950920436-2022-03-22T12:08:40.436Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.deletePost",
               "Runtime": "nodejs14.x",
@@ -348,7 +348,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647950920436-2022-03-22T12:08:40.436Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.getAllPosts",
               "Runtime": "nodejs14.x",
@@ -372,54 +372,54 @@
               "GetAllPostsLogGroup"
             ]
           },
-          "GetPostLambdaVersionHg1CENDgQr4QAzwwBgDtwCVjEA4hAuvtvPCRjfNQEvs": {
+          "GetPostLambdaVersionuKseq5XztG7vwJsiCX6XHwSb1ykzRrNVk9I0vhdvYRQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetPostLambdaFunction"
               },
-              "CodeSha256": "+GodcWk7KQnYKK6OweQj80xUSfz1WplmLfSHcsMTBo0="
+              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
             }
           },
-          "CreatePostLambdaVersionDfp1Ihv4r0GYiAKPzvoA79PxGa1BqjGSVPgrjeON0": {
+          "CreatePostLambdaVersionlB9phnovKku5ebxJQdYJCROhkq1sDLZCtbK1XusxU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreatePostLambdaFunction"
               },
-              "CodeSha256": "+GodcWk7KQnYKK6OweQj80xUSfz1WplmLfSHcsMTBo0="
+              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
             }
           },
-          "UpdatePostLambdaVersion4KET3kxITi8pgRQ2nICb7GbxQ5mrYLp4dj6zL7cySXM": {
+          "UpdatePostLambdaVersionD0fyhn2XnHam5i4chynIsQddh1G1pqctp1jDJP44JM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdatePostLambdaFunction"
               },
-              "CodeSha256": "+GodcWk7KQnYKK6OweQj80xUSfz1WplmLfSHcsMTBo0="
+              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
             }
           },
-          "DeletePostLambdaVersion2V95ys9Ewgu0qPUDZcAqmpDkn0XwxenznU9R5ClSayA": {
+          "DeletePostLambdaVersionrbKIVnCsETZy9MHMY3XiXxzmoK0iNKRm8Qm3Q0b1O8": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeletePostLambdaFunction"
               },
-              "CodeSha256": "+GodcWk7KQnYKK6OweQj80xUSfz1WplmLfSHcsMTBo0="
+              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
             }
           },
-          "GetAllPostsLambdaVersionISxp65fhbup9akKYZaMFdINSK2PPqKrmux8PDq387pA": {
+          "GetAllPostsLambdaVersion0rbZw17OBAFP5xx0LRZEygQcQDcL64b7ASsJl7O1X2A": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllPostsLambdaFunction"
               },
-              "CodeSha256": "+GodcWk7KQnYKK6OweQj80xUSfz1WplmLfSHcsMTBo0="
+              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
             }
           },
           "ApiGatewayRestApi": {
@@ -706,7 +706,7 @@
               "GetAllPostsLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1647950916376": {
+          "ApiGatewayDeployment1647987290910": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1347,7 +1347,7 @@
           "GetPostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetPostLambdaVersionHg1CENDgQr4QAzwwBgDtwCVjEA4hAuvtvPCRjfNQEvs"
+              "Ref": "GetPostLambdaVersionuKseq5XztG7vwJsiCX6XHwSb1ykzRrNVk9I0vhdvYRQ"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-GetPostLambdaFunctionQualifiedArn"
@@ -1356,7 +1356,7 @@
           "CreatePostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreatePostLambdaVersionDfp1Ihv4r0GYiAKPzvoA79PxGa1BqjGSVPgrjeON0"
+              "Ref": "CreatePostLambdaVersionlB9phnovKku5ebxJQdYJCROhkq1sDLZCtbK1XusxU"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-CreatePostLambdaFunctionQualifiedArn"
@@ -1365,7 +1365,7 @@
           "UpdatePostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdatePostLambdaVersion4KET3kxITi8pgRQ2nICb7GbxQ5mrYLp4dj6zL7cySXM"
+              "Ref": "UpdatePostLambdaVersionD0fyhn2XnHam5i4chynIsQddh1G1pqctp1jDJP44JM"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-UpdatePostLambdaFunctionQualifiedArn"
@@ -1374,7 +1374,7 @@
           "DeletePostLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeletePostLambdaVersion2V95ys9Ewgu0qPUDZcAqmpDkn0XwxenznU9R5ClSayA"
+              "Ref": "DeletePostLambdaVersionrbKIVnCsETZy9MHMY3XiXxzmoK0iNKRm8Qm3Q0b1O8"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-DeletePostLambdaFunctionQualifiedArn"
@@ -1383,7 +1383,7 @@
           "GetAllPostsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllPostsLambdaVersionISxp65fhbup9akKYZaMFdINSK2PPqKrmux8PDq387pA"
+              "Ref": "GetAllPostsLambdaVersion0rbZw17OBAFP5xx0LRZEygQcQDcL64b7ASsJl7O1X2A"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-GetAllPostsLambdaFunctionQualifiedArn"
@@ -1532,7 +1532,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetPostLambdaVersionHg1CENDgQr4QAzwwBgDtwCVjEA4hAuvtvPCRjfNQEvs"
+        "versionLogicalId": "GetPostLambdaVersionuKseq5XztG7vwJsiCX6XHwSb1ykzRrNVk9I0vhdvYRQ"
       },
       "createPost": {
         "handler": "api.createPost",
@@ -1557,7 +1557,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "CreatePostLambdaVersionDfp1Ihv4r0GYiAKPzvoA79PxGa1BqjGSVPgrjeON0"
+        "versionLogicalId": "CreatePostLambdaVersionlB9phnovKku5ebxJQdYJCROhkq1sDLZCtbK1XusxU"
       },
       "updatePost": {
         "handler": "api.updatePost",
@@ -1582,7 +1582,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "UpdatePostLambdaVersion4KET3kxITi8pgRQ2nICb7GbxQ5mrYLp4dj6zL7cySXM"
+        "versionLogicalId": "UpdatePostLambdaVersionD0fyhn2XnHam5i4chynIsQddh1G1pqctp1jDJP44JM"
       },
       "deletePost": {
         "handler": "api.deletePost",
@@ -1607,7 +1607,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "DeletePostLambdaVersion2V95ys9Ewgu0qPUDZcAqmpDkn0XwxenznU9R5ClSayA"
+        "versionLogicalId": "DeletePostLambdaVersionrbKIVnCsETZy9MHMY3XiXxzmoK0iNKRm8Qm3Q0b1O8"
       },
       "getAllPosts": {
         "handler": "api.getAllPosts",
@@ -1632,7 +1632,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetAllPostsLambdaVersionISxp65fhbup9akKYZaMFdINSK2PPqKrmux8PDq387pA"
+        "versionLogicalId": "GetAllPostsLambdaVersion0rbZw17OBAFP5xx0LRZEygQcQDcL64b7ASsJl7O1X2A"
       }
     },
     "resources": {
@@ -1686,7 +1686,7 @@
     "artifact": "/mnt/c/Users/steff/Documents/MyProjects/rest-apis/rest-api-mutant/.serverless/dynamodb-crud-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/dynamodb-crud-api/dev/1647950920436-2022-03-22T12:08:40.436Z",
+    "artifactDirectoryName": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z",
     "artifact": "dynamodb-crud-api.zip"
   }
 }
