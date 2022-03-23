@@ -21,7 +21,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: post/{postId}
+          path: mutant/{postId}
           method: GET
     iamRoleStatements:
       - Effect: "Allow"
@@ -35,7 +35,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: post
+          path: mutant
           method: POST
     iamRoleStatements:
       - Effect: "Allow"
@@ -49,7 +49,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: post/{postId}
+          path: mutant/{postId}
           method: PUT
     iamRoleStatements:
       - Effect: "Allow"
@@ -63,7 +63,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: post/{postId}
+          path: mutant/{postId}
           method: DELETE
     iamRoleStatements:
       - Effect: "Allow"
@@ -77,7 +77,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: posts
+          path: mutants
           method: GET
     iamRoleStatements:
       - Effect: "Allow"

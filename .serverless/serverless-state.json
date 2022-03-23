@@ -224,7 +224,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.getPost",
               "Runtime": "nodejs14.x",
@@ -255,7 +255,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.createPost",
               "Runtime": "nodejs14.x",
@@ -286,7 +286,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.updatePost",
               "Runtime": "nodejs14.x",
@@ -317,7 +317,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.deletePost",
               "Runtime": "nodejs14.x",
@@ -348,7 +348,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.getAllPosts",
               "Runtime": "nodejs14.x",
@@ -434,7 +434,7 @@
               "Policy": ""
             }
           },
-          "ApiGatewayResourcePost": {
+          "ApiGatewayResourceMutant": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
               "ParentId": {
@@ -443,17 +443,17 @@
                   "RootResourceId"
                 ]
               },
-              "PathPart": "post",
+              "PathPart": "mutant",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
             }
           },
-          "ApiGatewayResourcePostPostidVar": {
+          "ApiGatewayResourceMutantPostidVar": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
               "ParentId": {
-                "Ref": "ApiGatewayResourcePost"
+                "Ref": "ApiGatewayResourceMutant"
               },
               "PathPart": "{postId}",
               "RestApiId": {
@@ -461,7 +461,7 @@
               }
             }
           },
-          "ApiGatewayResourcePosts": {
+          "ApiGatewayResourceMutants": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
               "ParentId": {
@@ -470,19 +470,19 @@
                   "RootResourceId"
                 ]
               },
-              "PathPart": "posts",
+              "PathPart": "mutants",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
             }
           },
-          "ApiGatewayMethodPostPostidVarGet": {
+          "ApiGatewayMethodMutantPostidVarGet": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "GET",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourcePostPostidVar"
+                "Ref": "ApiGatewayResourceMutantPostidVar"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -522,13 +522,13 @@
               "GetPostLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodPostPost": {
+          "ApiGatewayMethodMutantPost": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "POST",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourcePost"
+                "Ref": "ApiGatewayResourceMutant"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -568,13 +568,13 @@
               "CreatePostLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodPostPostidVarPut": {
+          "ApiGatewayMethodMutantPostidVarPut": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "PUT",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourcePostPostidVar"
+                "Ref": "ApiGatewayResourceMutantPostidVar"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -614,13 +614,13 @@
               "UpdatePostLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodPostPostidVarDelete": {
+          "ApiGatewayMethodMutantPostidVarDelete": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "DELETE",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourcePostPostidVar"
+                "Ref": "ApiGatewayResourceMutantPostidVar"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -660,13 +660,13 @@
               "DeletePostLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodPostsGet": {
+          "ApiGatewayMethodMutantsGet": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "GET",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourcePosts"
+                "Ref": "ApiGatewayResourceMutants"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -706,7 +706,7 @@
               "GetAllPostsLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1647987290910": {
+          "ApiGatewayDeployment1648041006613": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -715,11 +715,11 @@
               "StageName": "dev"
             },
             "DependsOn": [
-              "ApiGatewayMethodPostPostidVarGet",
-              "ApiGatewayMethodPostPost",
-              "ApiGatewayMethodPostPostidVarPut",
-              "ApiGatewayMethodPostPostidVarDelete",
-              "ApiGatewayMethodPostsGet"
+              "ApiGatewayMethodMutantPostidVarGet",
+              "ApiGatewayMethodMutantPost",
+              "ApiGatewayMethodMutantPostidVarPut",
+              "ApiGatewayMethodMutantPostidVarDelete",
+              "ApiGatewayMethodMutantsGet"
             ]
           },
           "GetPostLambdaPermissionApiGateway": {
@@ -1517,7 +1517,7 @@
         "events": [
           {
             "http": {
-              "path": "post/{postId}",
+              "path": "mutant/{postId}",
               "method": "get",
               "integration": "AWS_PROXY"
             }
@@ -1542,7 +1542,7 @@
         "events": [
           {
             "http": {
-              "path": "post",
+              "path": "mutant",
               "method": "post",
               "integration": "AWS_PROXY"
             }
@@ -1567,7 +1567,7 @@
         "events": [
           {
             "http": {
-              "path": "post/{postId}",
+              "path": "mutant/{postId}",
               "method": "put",
               "integration": "AWS_PROXY"
             }
@@ -1592,7 +1592,7 @@
         "events": [
           {
             "http": {
-              "path": "post/{postId}",
+              "path": "mutant/{postId}",
               "method": "delete",
               "integration": "AWS_PROXY"
             }
@@ -1617,7 +1617,7 @@
         "events": [
           {
             "http": {
-              "path": "posts",
+              "path": "mutants",
               "method": "get",
               "integration": "AWS_PROXY"
             }
@@ -1686,7 +1686,7 @@
     "artifact": "/mnt/c/Users/steff/Documents/MyProjects/rest-apis/rest-api-mutant/.serverless/dynamodb-crud-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/dynamodb-crud-api/dev/1647987299959-2022-03-22T22:14:59.959Z",
+    "artifactDirectoryName": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z",
     "artifact": "dynamodb-crud-api.zip"
   }
 }
