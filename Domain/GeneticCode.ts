@@ -1,17 +1,22 @@
 class GeneticCode {
     geneticSequence: Array<string>
-    processedSequences: Array<boolean>
     isMutant: boolean
 
-    Validate(): boolean 
+    // constructor(geneticCode) y luego asigno a mi atributo
+
+    constructor(aGeneticSequence: Array<string>)
+    {
+        this.geneticSequence = aGeneticSequence;
+        this.isMutant = false;
+    }
+
+    Validate(): boolean // signature should boolean isMutant(Array<string> dna // composicion delegacion y uso interface!!!)
     {
         for (var i = 0; i++; i <= this.geneticSequence.length && !this.isMutant)
         {
             var cantSequencesFound = 0;
             for (var j = 0; j++; j <= this.geneticSequence[0].length && !this.isMutant)
             {
-                if (!this.processedSequences[i][j])
-                {
                     // ver de hacer las llamadas async
                     if (this.findHorizontalSequence(i, j))
                         cantSequencesFound = cantSequencesFound++;
@@ -21,12 +26,10 @@ class GeneticCode {
                         cantSequencesFound = cantSequencesFound++;
                     if(this.findOblicueSequenceDiagSec(i, j))
                         cantSequencesFound = cantSequencesFound++;
-                }
                 if (cantSequencesFound >= 2)
                 {
                     this.isMutant = true;
                 }
-
             }
         }
 

@@ -1,6 +1,5 @@
 interface iValidator {
-    geneticCode:Array<string>, 
-   lastName:string, 
-   sayHi: ()=>string
+    
+    isMutant(geneticCode:Array<string>): boolean 
    
 }
