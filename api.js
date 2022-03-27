@@ -40,23 +40,34 @@ const getGeneticCode = async (event) => {
 const createGeneticCode = async (event) => {
     
     // send to logic!!
+    // la siguiente linea estaba dentro del try
+    const body = JSON.parse(event.body);
     isMutant = validateGenticCode => validateGenticCode(body);
+    //const body2 = JSON.stringify
     if (isMutant)
     {
         const response = { statusCode: 200 };
+        let validationResult = {
+            "geneticType": "Mutant"
+        }
     }
     else
     {
         const response = { statusCode: 403 };
+        let validationResult = {
+            "geneticType": "Mutant"
+        }
     }
     
+    body.push(validationResult);
 
     try {
-        const body = JSON.parse(event.body);
+        
         const params = {
             TableName: process.env.DYNAMODB_TABLE_NAME,
             Item: marshall(body || {}),
         };
+        
         const createResult = await db.send(new PutItemCommand(params));
 
         response.body = JSON.stringify({
