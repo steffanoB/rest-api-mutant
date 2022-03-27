@@ -6,31 +6,31 @@ provider:
   stage: dev
   region: sa-east-1
   environment:
-    DYNAMODB_TABLE_NAME: ${self:custom.postsTableName}
+    DYNAMODB_TABLE_NAME: ${self:custom.geneticCodesTableName}
 
 custom:
-  postsTableName: posts-table-${self:provider.stage}
+  geneticCodesTableName: geneticCodes-table-${self:provider.stage}
 
 plugins:
   - serverless-iam-roles-per-function
 functions:
-  getPost:
-    handler: api.getPost
-    name: get-post
+  getGeneticCode:
+    handler: api.getGeneticCode
+    name: get-geneticCode
     memorySize: 128 # mb
     timeout: 5 # seconds
     events:
       - http:
-          path: mutant/{postId}
+          path: mutant/{geneticCode}
           method: GET
     iamRoleStatements:
       - Effect: "Allow"
         Action:
           - "dynamodb:GetItem"
-        Resource: !GetAtt PostsTable.Arn
-  createPost:
-    handler: api.createPost
-    name: create-post
+        Resource: !GetAtt GeneticCodesTable.Arn
+  createGeneticCodee:
+    handler: api.createGeneticCode
+    name: create-GeneticCode
     memorySize: 128 # mb
     timeout: 5 # seconds
     events:
@@ -41,38 +41,38 @@ functions:
       - Effect: "Allow"
         Action:
           - "dynamodb:PutItem"
-        Resource: !GetAtt PostsTable.Arn
-  updatePost:
-    handler: api.updatePost
-    name: update-post
+        Resource: !GetAtt GeneticCodesTable.Arn
+  updateGeneticCode:
+    handler: api.updateGeneticCode
+    name: update-geneticCode
     memorySize: 128 # mb
     timeout: 5 # seconds
     events:
       - http:
-          path: mutant/{postId}
+          path: mutant/{geneticCode}
           method: PUT
     iamRoleStatements:
       - Effect: "Allow"
         Action:
           - "dynamodb:UpdateItem"
-        Resource: !GetAtt PostsTable.Arn
-  deletePost:
-    handler: api.deletePost
-    name: delete-post
+        Resource: !GetAtt GeneticCodesTable.Arn
+  deleteGeneticCode:
+    handler: api.deleteGeneticCode
+    name: delete-geneticCode
     memorySize: 128 # mb
     timeout: 5 # seconds
     events:
       - http:
-          path: mutant/{postId}
+          path: mutant/{geneticCode}
           method: DELETE
     iamRoleStatements:
       - Effect: "Allow"
         Action:
           - "dynamodb:DeleteItem"
-        Resource: !GetAtt PostsTable.Arn
-  getAllPosts:
-    handler: api.getAllPosts
-    name: get-all-posts
+        Resource: !GetAtt GeneticCodesTable.Arn
+  getAllGeneticCodes:
+    handler: api.getAllGeneticCodes
+    name: get-all-geneticCodes
     memorySize: 128 # mb
     timeout: 5 # seconds
     events:
@@ -83,19 +83,19 @@ functions:
       - Effect: "Allow"
         Action:
           - "dynamodb:Scan"
-        Resource: !GetAtt PostsTable.Arn
+        Resource: !GetAtt GeneticCodesTable.Arn
 
 resources:
   Resources:
-    PostsTable:
+    GeneticCodesTable:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: ${self:custom.postsTableName}
+        TableName: ${self:custom.geneticCodesTableName}
         AttributeDefinitions:
-          - AttributeName: postId
+          - AttributeName: geneticSequence
             AttributeType: S
         KeySchema:
-          - AttributeName: postId
+          - AttributeName: geneticSequence
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1

@@ -10,7 +10,7 @@
       "stage": "dev",
       "region": "sa-east-1",
       "environment": {
-        "DYNAMODB_TABLE_NAME": "posts-table-dev"
+        "DYNAMODB_TABLE_NAME": "geneticCodes-table-dev"
       },
       "versionFunctions": true,
       "compiledCloudFormationTemplate": {
@@ -86,34 +86,34 @@
               }
             }
           },
-          "GetPostLogGroup": {
+          "GetGeneticCodeLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/get-post"
+              "LogGroupName": "/aws/lambda/get-geneticCode"
             }
           },
-          "CreatePostLogGroup": {
+          "CreateGeneticCodeeLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/create-post"
+              "LogGroupName": "/aws/lambda/create-GeneticCode"
             }
           },
-          "UpdatePostLogGroup": {
+          "UpdateGeneticCodeLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/update-post"
+              "LogGroupName": "/aws/lambda/update-geneticCode"
             }
           },
-          "DeletePostLogGroup": {
+          "DeleteGeneticCodeLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/delete-post"
+              "LogGroupName": "/aws/lambda/delete-geneticCode"
             }
           },
-          "GetAllPostsLogGroup": {
+          "GetAllGeneticCodesLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/get-all-posts"
+              "LogGroupName": "/aws/lambda/get-all-geneticCodes"
             }
           },
           "IamRoleLambdaExecution": {
@@ -158,19 +158,19 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-post:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-geneticCode:*"
                           },
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/create-post:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/create-GeneticCode:*"
                           },
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/update-post:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/update-geneticCode:*"
                           },
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/delete-post:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/delete-geneticCode:*"
                           },
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-all-posts:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-all-geneticCodes:*"
                           }
                         ]
                       },
@@ -181,19 +181,19 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-post:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-geneticCode:*:*"
                           },
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/create-post:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/create-GeneticCode:*:*"
                           },
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/update-post:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/update-geneticCode:*:*"
                           },
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/delete-post:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/delete-geneticCode:*:*"
                           },
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-all-posts:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-all-geneticCodes:*:*"
                           }
                         ]
                       }
@@ -217,209 +217,209 @@
               }
             }
           },
-          "GetPostLambdaFunction": {
+          "GetGeneticCodeLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
               "Code": {
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
               },
-              "Handler": "api.getPost",
+              "Handler": "api.getGeneticCode",
               "Runtime": "nodejs14.x",
-              "FunctionName": "get-post",
+              "FunctionName": "get-geneticCode",
               "MemorySize": 128,
               "Timeout": 5,
               "Environment": {
                 "Variables": {
-                  "DYNAMODB_TABLE_NAME": "posts-table-dev"
+                  "DYNAMODB_TABLE_NAME": "geneticCodes-table-dev"
                 }
               },
               "Role": {
                 "Fn::GetAtt": [
-                  "GetPostIamRoleLambdaExecution",
+                  "GetGeneticCodeIamRoleLambdaExecution",
                   "Arn"
                 ]
               }
             },
             "DependsOn": [
-              "GetPostIamRoleLambdaExecution",
-              "GetPostLogGroup"
+              "GetGeneticCodeIamRoleLambdaExecution",
+              "GetGeneticCodeLogGroup"
             ]
           },
-          "CreatePostLambdaFunction": {
+          "CreateGeneticCodeeLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
               "Code": {
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
               },
-              "Handler": "api.createPost",
+              "Handler": "api.createGeneticCode",
               "Runtime": "nodejs14.x",
-              "FunctionName": "create-post",
+              "FunctionName": "create-GeneticCode",
               "MemorySize": 128,
               "Timeout": 5,
               "Environment": {
                 "Variables": {
-                  "DYNAMODB_TABLE_NAME": "posts-table-dev"
+                  "DYNAMODB_TABLE_NAME": "geneticCodes-table-dev"
                 }
               },
               "Role": {
                 "Fn::GetAtt": [
-                  "CreatePostIamRoleLambdaExecution",
+                  "CreateGeneticCodeeIamRoleLambdaExecution",
                   "Arn"
                 ]
               }
             },
             "DependsOn": [
-              "CreatePostIamRoleLambdaExecution",
-              "CreatePostLogGroup"
+              "CreateGeneticCodeeIamRoleLambdaExecution",
+              "CreateGeneticCodeeLogGroup"
             ]
           },
-          "UpdatePostLambdaFunction": {
+          "UpdateGeneticCodeLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
               "Code": {
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
               },
-              "Handler": "api.updatePost",
+              "Handler": "api.updateGeneticCode",
               "Runtime": "nodejs14.x",
-              "FunctionName": "update-post",
+              "FunctionName": "update-geneticCode",
               "MemorySize": 128,
               "Timeout": 5,
               "Environment": {
                 "Variables": {
-                  "DYNAMODB_TABLE_NAME": "posts-table-dev"
+                  "DYNAMODB_TABLE_NAME": "geneticCodes-table-dev"
                 }
               },
               "Role": {
                 "Fn::GetAtt": [
-                  "UpdatePostIamRoleLambdaExecution",
+                  "UpdateGeneticCodeIamRoleLambdaExecution",
                   "Arn"
                 ]
               }
             },
             "DependsOn": [
-              "UpdatePostIamRoleLambdaExecution",
-              "UpdatePostLogGroup"
+              "UpdateGeneticCodeIamRoleLambdaExecution",
+              "UpdateGeneticCodeLogGroup"
             ]
           },
-          "DeletePostLambdaFunction": {
+          "DeleteGeneticCodeLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
               "Code": {
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
               },
-              "Handler": "api.deletePost",
+              "Handler": "api.deleteGeneticCode",
               "Runtime": "nodejs14.x",
-              "FunctionName": "delete-post",
+              "FunctionName": "delete-geneticCode",
               "MemorySize": 128,
               "Timeout": 5,
               "Environment": {
                 "Variables": {
-                  "DYNAMODB_TABLE_NAME": "posts-table-dev"
+                  "DYNAMODB_TABLE_NAME": "geneticCodes-table-dev"
                 }
               },
               "Role": {
                 "Fn::GetAtt": [
-                  "DeletePostIamRoleLambdaExecution",
+                  "DeleteGeneticCodeIamRoleLambdaExecution",
                   "Arn"
                 ]
               }
             },
             "DependsOn": [
-              "DeletePostIamRoleLambdaExecution",
-              "DeletePostLogGroup"
+              "DeleteGeneticCodeIamRoleLambdaExecution",
+              "DeleteGeneticCodeLogGroup"
             ]
           },
-          "GetAllPostsLambdaFunction": {
+          "GetAllGeneticCodesLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
               "Code": {
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
               },
-              "Handler": "api.getAllPosts",
+              "Handler": "api.getAllGeneticCodes",
               "Runtime": "nodejs14.x",
-              "FunctionName": "get-all-posts",
+              "FunctionName": "get-all-geneticCodes",
               "MemorySize": 128,
               "Timeout": 5,
               "Environment": {
                 "Variables": {
-                  "DYNAMODB_TABLE_NAME": "posts-table-dev"
+                  "DYNAMODB_TABLE_NAME": "geneticCodes-table-dev"
                 }
               },
               "Role": {
                 "Fn::GetAtt": [
-                  "GetAllPostsIamRoleLambdaExecution",
+                  "GetAllGeneticCodesIamRoleLambdaExecution",
                   "Arn"
                 ]
               }
             },
             "DependsOn": [
-              "GetAllPostsIamRoleLambdaExecution",
-              "GetAllPostsLogGroup"
+              "GetAllGeneticCodesIamRoleLambdaExecution",
+              "GetAllGeneticCodesLogGroup"
             ]
           },
-          "GetPostLambdaVersionuKseq5XztG7vwJsiCX6XHwSb1ykzRrNVk9I0vhdvYRQ": {
+          "GetGeneticCodeLambdaVersioncmvmUtx6chpiW2LFGjVbe6dXiBaxnCybOig4MjRus4": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
-                "Ref": "GetPostLambdaFunction"
+                "Ref": "GetGeneticCodeLambdaFunction"
               },
-              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
+              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
             }
           },
-          "CreatePostLambdaVersionlB9phnovKku5ebxJQdYJCROhkq1sDLZCtbK1XusxU": {
+          "CreateGeneticCodeeLambdaVersionRixf8BrhC8IwJ3Wiio4Sx9uB9GRagqRb3w6jOzXKfg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
-                "Ref": "CreatePostLambdaFunction"
+                "Ref": "CreateGeneticCodeeLambdaFunction"
               },
-              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
+              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
             }
           },
-          "UpdatePostLambdaVersionD0fyhn2XnHam5i4chynIsQddh1G1pqctp1jDJP44JM": {
+          "UpdateGeneticCodeLambdaVersiony4ezcRPbUlcGR7hyAH6HgqYwt51D5dAkQkcyYqNZzBo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
-                "Ref": "UpdatePostLambdaFunction"
+                "Ref": "UpdateGeneticCodeLambdaFunction"
               },
-              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
+              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
             }
           },
-          "DeletePostLambdaVersionrbKIVnCsETZy9MHMY3XiXxzmoK0iNKRm8Qm3Q0b1O8": {
+          "DeleteGeneticCodeLambdaVersionddOnArFkSu3Wb6hszYDO6dLKHgdsvXp3Myfioe5sgZw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
-                "Ref": "DeletePostLambdaFunction"
+                "Ref": "DeleteGeneticCodeLambdaFunction"
               },
-              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
+              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
             }
           },
-          "GetAllPostsLambdaVersion0rbZw17OBAFP5xx0LRZEygQcQDcL64b7ASsJl7O1X2A": {
+          "GetAllGeneticCodesLambdaVersionmfU1SBXwVPfcLDHDyQGtYrtNiyILppo87le4WE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
-                "Ref": "GetAllPostsLambdaFunction"
+                "Ref": "GetAllGeneticCodesLambdaFunction"
               },
-              "CodeSha256": "cPTz3d3OynUy9LNz8R40+B14gSjKE1mrZ83x2tJp63o="
+              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
             }
           },
           "ApiGatewayRestApi": {
@@ -449,13 +449,13 @@
               }
             }
           },
-          "ApiGatewayResourceMutantPostidVar": {
+          "ApiGatewayResourceMutantGeneticcodeVar": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
               "ParentId": {
                 "Ref": "ApiGatewayResourceMutant"
               },
-              "PathPart": "{postId}",
+              "PathPart": "{geneticCode}",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
@@ -476,13 +476,13 @@
               }
             }
           },
-          "ApiGatewayMethodMutantPostidVarGet": {
+          "ApiGatewayMethodMutantGeneticcodeVarGet": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "GET",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceMutantPostidVar"
+                "Ref": "ApiGatewayResourceMutantGeneticcodeVar"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -507,7 +507,7 @@
                       ":lambda:path/2015-03-31/functions/",
                       {
                         "Fn::GetAtt": [
-                          "GetPostLambdaFunction",
+                          "GetGeneticCodeLambdaFunction",
                           "Arn"
                         ]
                       },
@@ -519,7 +519,7 @@
               "MethodResponses": []
             },
             "DependsOn": [
-              "GetPostLambdaPermissionApiGateway"
+              "GetGeneticCodeLambdaPermissionApiGateway"
             ]
           },
           "ApiGatewayMethodMutantPost": {
@@ -553,7 +553,7 @@
                       ":lambda:path/2015-03-31/functions/",
                       {
                         "Fn::GetAtt": [
-                          "CreatePostLambdaFunction",
+                          "CreateGeneticCodeeLambdaFunction",
                           "Arn"
                         ]
                       },
@@ -565,16 +565,16 @@
               "MethodResponses": []
             },
             "DependsOn": [
-              "CreatePostLambdaPermissionApiGateway"
+              "CreateGeneticCodeeLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodMutantPostidVarPut": {
+          "ApiGatewayMethodMutantGeneticcodeVarPut": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "PUT",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceMutantPostidVar"
+                "Ref": "ApiGatewayResourceMutantGeneticcodeVar"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -599,7 +599,7 @@
                       ":lambda:path/2015-03-31/functions/",
                       {
                         "Fn::GetAtt": [
-                          "UpdatePostLambdaFunction",
+                          "UpdateGeneticCodeLambdaFunction",
                           "Arn"
                         ]
                       },
@@ -611,16 +611,16 @@
               "MethodResponses": []
             },
             "DependsOn": [
-              "UpdatePostLambdaPermissionApiGateway"
+              "UpdateGeneticCodeLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodMutantPostidVarDelete": {
+          "ApiGatewayMethodMutantGeneticcodeVarDelete": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "DELETE",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceMutantPostidVar"
+                "Ref": "ApiGatewayResourceMutantGeneticcodeVar"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -645,7 +645,7 @@
                       ":lambda:path/2015-03-31/functions/",
                       {
                         "Fn::GetAtt": [
-                          "DeletePostLambdaFunction",
+                          "DeleteGeneticCodeLambdaFunction",
                           "Arn"
                         ]
                       },
@@ -657,7 +657,7 @@
               "MethodResponses": []
             },
             "DependsOn": [
-              "DeletePostLambdaPermissionApiGateway"
+              "DeleteGeneticCodeLambdaPermissionApiGateway"
             ]
           },
           "ApiGatewayMethodMutantsGet": {
@@ -691,7 +691,7 @@
                       ":lambda:path/2015-03-31/functions/",
                       {
                         "Fn::GetAtt": [
-                          "GetAllPostsLambdaFunction",
+                          "GetAllGeneticCodesLambdaFunction",
                           "Arn"
                         ]
                       },
@@ -703,10 +703,10 @@
               "MethodResponses": []
             },
             "DependsOn": [
-              "GetAllPostsLambdaPermissionApiGateway"
+              "GetAllGeneticCodesLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1648041006613": {
+          "ApiGatewayDeployment1648341803176": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -715,19 +715,19 @@
               "StageName": "dev"
             },
             "DependsOn": [
-              "ApiGatewayMethodMutantPostidVarGet",
+              "ApiGatewayMethodMutantGeneticcodeVarGet",
               "ApiGatewayMethodMutantPost",
-              "ApiGatewayMethodMutantPostidVarPut",
-              "ApiGatewayMethodMutantPostidVarDelete",
+              "ApiGatewayMethodMutantGeneticcodeVarPut",
+              "ApiGatewayMethodMutantGeneticcodeVarDelete",
               "ApiGatewayMethodMutantsGet"
             ]
           },
-          "GetPostLambdaPermissionApiGateway": {
+          "GetGeneticCodeLambdaPermissionApiGateway": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
               "FunctionName": {
                 "Fn::GetAtt": [
-                  "GetPostLambdaFunction",
+                  "GetGeneticCodeLambdaFunction",
                   "Arn"
                 ]
               },
@@ -759,12 +759,12 @@
               }
             }
           },
-          "CreatePostLambdaPermissionApiGateway": {
+          "CreateGeneticCodeeLambdaPermissionApiGateway": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
               "FunctionName": {
                 "Fn::GetAtt": [
-                  "CreatePostLambdaFunction",
+                  "CreateGeneticCodeeLambdaFunction",
                   "Arn"
                 ]
               },
@@ -796,12 +796,12 @@
               }
             }
           },
-          "UpdatePostLambdaPermissionApiGateway": {
+          "UpdateGeneticCodeLambdaPermissionApiGateway": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
               "FunctionName": {
                 "Fn::GetAtt": [
-                  "UpdatePostLambdaFunction",
+                  "UpdateGeneticCodeLambdaFunction",
                   "Arn"
                 ]
               },
@@ -833,12 +833,12 @@
               }
             }
           },
-          "DeletePostLambdaPermissionApiGateway": {
+          "DeleteGeneticCodeLambdaPermissionApiGateway": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
               "FunctionName": {
                 "Fn::GetAtt": [
-                  "DeletePostLambdaFunction",
+                  "DeleteGeneticCodeLambdaFunction",
                   "Arn"
                 ]
               },
@@ -870,12 +870,12 @@
               }
             }
           },
-          "GetAllPostsLambdaPermissionApiGateway": {
+          "GetAllGeneticCodesLambdaPermissionApiGateway": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
               "FunctionName": {
                 "Fn::GetAtt": [
-                  "GetAllPostsLambdaFunction",
+                  "GetAllGeneticCodesLambdaFunction",
                   "Arn"
                 ]
               },
@@ -907,7 +907,7 @@
               }
             }
           },
-          "GetPostIamRoleLambdaExecution": {
+          "GetGeneticCodeIamRoleLambdaExecution": {
             "Type": "AWS::IAM::Role",
             "Properties": {
               "AssumeRolePolicyDocument": {
@@ -950,7 +950,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-post:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-geneticCode:*:*"
                           }
                         ]
                       },
@@ -961,7 +961,7 @@
                         ],
                         "Resource": {
                           "Fn::GetAtt": [
-                            "PostsTable",
+                            "GeneticCodesTable",
                             "Arn"
                           ]
                         }
@@ -977,7 +977,7 @@
                   [
                     "dynamodb-crud-api",
                     "dev",
-                    "getPost",
+                    "getGeneticCode",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -988,7 +988,7 @@
               "ManagedPolicyArns": []
             }
           },
-          "CreatePostIamRoleLambdaExecution": {
+          "CreateGeneticCodeeIamRoleLambdaExecution": {
             "Type": "AWS::IAM::Role",
             "Properties": {
               "AssumeRolePolicyDocument": {
@@ -1031,7 +1031,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/create-post:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/create-GeneticCode:*:*"
                           }
                         ]
                       },
@@ -1042,7 +1042,7 @@
                         ],
                         "Resource": {
                           "Fn::GetAtt": [
-                            "PostsTable",
+                            "GeneticCodesTable",
                             "Arn"
                           ]
                         }
@@ -1058,7 +1058,7 @@
                   [
                     "dynamodb-crud-api",
                     "dev",
-                    "createPost",
+                    "createGeneticCodee",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -1069,7 +1069,7 @@
               "ManagedPolicyArns": []
             }
           },
-          "UpdatePostIamRoleLambdaExecution": {
+          "UpdateGeneticCodeIamRoleLambdaExecution": {
             "Type": "AWS::IAM::Role",
             "Properties": {
               "AssumeRolePolicyDocument": {
@@ -1112,7 +1112,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/update-post:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/update-geneticCode:*:*"
                           }
                         ]
                       },
@@ -1123,7 +1123,7 @@
                         ],
                         "Resource": {
                           "Fn::GetAtt": [
-                            "PostsTable",
+                            "GeneticCodesTable",
                             "Arn"
                           ]
                         }
@@ -1139,7 +1139,7 @@
                   [
                     "dynamodb-crud-api",
                     "dev",
-                    "updatePost",
+                    "updateGeneticCode",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -1150,7 +1150,7 @@
               "ManagedPolicyArns": []
             }
           },
-          "DeletePostIamRoleLambdaExecution": {
+          "DeleteGeneticCodeIamRoleLambdaExecution": {
             "Type": "AWS::IAM::Role",
             "Properties": {
               "AssumeRolePolicyDocument": {
@@ -1193,7 +1193,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/delete-post:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/delete-geneticCode:*:*"
                           }
                         ]
                       },
@@ -1204,7 +1204,7 @@
                         ],
                         "Resource": {
                           "Fn::GetAtt": [
-                            "PostsTable",
+                            "GeneticCodesTable",
                             "Arn"
                           ]
                         }
@@ -1220,7 +1220,7 @@
                   [
                     "dynamodb-crud-api",
                     "dev",
-                    "deletePost",
+                    "deleteGeneticCode",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -1231,7 +1231,7 @@
               "ManagedPolicyArns": []
             }
           },
-          "GetAllPostsIamRoleLambdaExecution": {
+          "GetAllGeneticCodesIamRoleLambdaExecution": {
             "Type": "AWS::IAM::Role",
             "Properties": {
               "AssumeRolePolicyDocument": {
@@ -1274,7 +1274,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-all-posts:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/get-all-geneticCodes:*:*"
                           }
                         ]
                       },
@@ -1285,7 +1285,7 @@
                         ],
                         "Resource": {
                           "Fn::GetAtt": [
-                            "PostsTable",
+                            "GeneticCodesTable",
                             "Arn"
                           ]
                         }
@@ -1301,7 +1301,7 @@
                   [
                     "dynamodb-crud-api",
                     "dev",
-                    "getAllPosts",
+                    "getAllGeneticCodes",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -1312,19 +1312,19 @@
               "ManagedPolicyArns": []
             }
           },
-          "PostsTable": {
+          "GeneticCodesTable": {
             "Type": "AWS::DynamoDB::Table",
             "Properties": {
-              "TableName": "posts-table-dev",
+              "TableName": "geneticCodes-table-dev",
               "AttributeDefinitions": [
                 {
-                  "AttributeName": "postId",
+                  "AttributeName": "geneticSequence",
                   "AttributeType": "S"
                 }
               ],
               "KeySchema": [
                 {
-                  "AttributeName": "postId",
+                  "AttributeName": "geneticSequence",
                   "KeyType": "HASH"
                 }
               ],
@@ -1344,49 +1344,49 @@
               "Name": "sls-dynamodb-crud-api-dev-ServerlessDeploymentBucketName"
             }
           },
-          "GetPostLambdaFunctionQualifiedArn": {
+          "GetGeneticCodeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetPostLambdaVersionuKseq5XztG7vwJsiCX6XHwSb1ykzRrNVk9I0vhdvYRQ"
+              "Ref": "GetGeneticCodeLambdaVersioncmvmUtx6chpiW2LFGjVbe6dXiBaxnCybOig4MjRus4"
             },
             "Export": {
-              "Name": "sls-dynamodb-crud-api-dev-GetPostLambdaFunctionQualifiedArn"
+              "Name": "sls-dynamodb-crud-api-dev-GetGeneticCodeLambdaFunctionQualifiedArn"
             }
           },
-          "CreatePostLambdaFunctionQualifiedArn": {
+          "CreateGeneticCodeeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreatePostLambdaVersionlB9phnovKku5ebxJQdYJCROhkq1sDLZCtbK1XusxU"
+              "Ref": "CreateGeneticCodeeLambdaVersionRixf8BrhC8IwJ3Wiio4Sx9uB9GRagqRb3w6jOzXKfg"
             },
             "Export": {
-              "Name": "sls-dynamodb-crud-api-dev-CreatePostLambdaFunctionQualifiedArn"
+              "Name": "sls-dynamodb-crud-api-dev-CreateGeneticCodeeLambdaFunctionQualifiedArn"
             }
           },
-          "UpdatePostLambdaFunctionQualifiedArn": {
+          "UpdateGeneticCodeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdatePostLambdaVersionD0fyhn2XnHam5i4chynIsQddh1G1pqctp1jDJP44JM"
+              "Ref": "UpdateGeneticCodeLambdaVersiony4ezcRPbUlcGR7hyAH6HgqYwt51D5dAkQkcyYqNZzBo"
             },
             "Export": {
-              "Name": "sls-dynamodb-crud-api-dev-UpdatePostLambdaFunctionQualifiedArn"
+              "Name": "sls-dynamodb-crud-api-dev-UpdateGeneticCodeLambdaFunctionQualifiedArn"
             }
           },
-          "DeletePostLambdaFunctionQualifiedArn": {
+          "DeleteGeneticCodeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeletePostLambdaVersionrbKIVnCsETZy9MHMY3XiXxzmoK0iNKRm8Qm3Q0b1O8"
+              "Ref": "DeleteGeneticCodeLambdaVersionddOnArFkSu3Wb6hszYDO6dLKHgdsvXp3Myfioe5sgZw"
             },
             "Export": {
-              "Name": "sls-dynamodb-crud-api-dev-DeletePostLambdaFunctionQualifiedArn"
+              "Name": "sls-dynamodb-crud-api-dev-DeleteGeneticCodeLambdaFunctionQualifiedArn"
             }
           },
-          "GetAllPostsLambdaFunctionQualifiedArn": {
+          "GetAllGeneticCodesLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllPostsLambdaVersion0rbZw17OBAFP5xx0LRZEygQcQDcL64b7ASsJl7O1X2A"
+              "Ref": "GetAllGeneticCodesLambdaVersionmfU1SBXwVPfcLDHDyQGtYrtNiyILppo87le4WE"
             },
             "Export": {
-              "Name": "sls-dynamodb-crud-api-dev-GetAllPostsLambdaFunctionQualifiedArn"
+              "Name": "sls-dynamodb-crud-api-dev-GetAllGeneticCodesLambdaFunctionQualifiedArn"
             }
           },
           "ServiceEndpoint": {
@@ -1502,22 +1502,22 @@
       "vpc": {}
     },
     "custom": {
-      "postsTableName": "posts-table-dev"
+      "geneticCodesTableName": "geneticCodes-table-dev"
     },
     "plugins": [
       "serverless-iam-roles-per-function"
     ],
     "pluginsData": {},
     "functions": {
-      "getPost": {
-        "handler": "api.getPost",
-        "name": "get-post",
+      "getGeneticCode": {
+        "handler": "api.getGeneticCode",
+        "name": "get-geneticCode",
         "memorySize": 128,
         "timeout": 5,
         "events": [
           {
             "http": {
-              "path": "mutant/{postId}",
+              "path": "mutant/{geneticCode}",
               "method": "get",
               "integration": "AWS_PROXY"
             }
@@ -1525,18 +1525,18 @@
         ],
         "iamRoleStatements": [
           {
-            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"GetPostIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
+            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"GetGeneticCodeIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
           }
         ],
         "package": {},
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetPostLambdaVersionuKseq5XztG7vwJsiCX6XHwSb1ykzRrNVk9I0vhdvYRQ"
+        "versionLogicalId": "GetGeneticCodeLambdaVersioncmvmUtx6chpiW2LFGjVbe6dXiBaxnCybOig4MjRus4"
       },
-      "createPost": {
-        "handler": "api.createPost",
-        "name": "create-post",
+      "createGeneticCodee": {
+        "handler": "api.createGeneticCode",
+        "name": "create-GeneticCode",
         "memorySize": 128,
         "timeout": 5,
         "events": [
@@ -1550,24 +1550,24 @@
         ],
         "iamRoleStatements": [
           {
-            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"CreatePostIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
+            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"CreateGeneticCodeeIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
           }
         ],
         "package": {},
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "CreatePostLambdaVersionlB9phnovKku5ebxJQdYJCROhkq1sDLZCtbK1XusxU"
+        "versionLogicalId": "CreateGeneticCodeeLambdaVersionRixf8BrhC8IwJ3Wiio4Sx9uB9GRagqRb3w6jOzXKfg"
       },
-      "updatePost": {
-        "handler": "api.updatePost",
-        "name": "update-post",
+      "updateGeneticCode": {
+        "handler": "api.updateGeneticCode",
+        "name": "update-geneticCode",
         "memorySize": 128,
         "timeout": 5,
         "events": [
           {
             "http": {
-              "path": "mutant/{postId}",
+              "path": "mutant/{geneticCode}",
               "method": "put",
               "integration": "AWS_PROXY"
             }
@@ -1575,24 +1575,24 @@
         ],
         "iamRoleStatements": [
           {
-            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"UpdatePostIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
+            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"UpdateGeneticCodeIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
           }
         ],
         "package": {},
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "UpdatePostLambdaVersionD0fyhn2XnHam5i4chynIsQddh1G1pqctp1jDJP44JM"
+        "versionLogicalId": "UpdateGeneticCodeLambdaVersiony4ezcRPbUlcGR7hyAH6HgqYwt51D5dAkQkcyYqNZzBo"
       },
-      "deletePost": {
-        "handler": "api.deletePost",
-        "name": "delete-post",
+      "deleteGeneticCode": {
+        "handler": "api.deleteGeneticCode",
+        "name": "delete-geneticCode",
         "memorySize": 128,
         "timeout": 5,
         "events": [
           {
             "http": {
-              "path": "mutant/{postId}",
+              "path": "mutant/{geneticCode}",
               "method": "delete",
               "integration": "AWS_PROXY"
             }
@@ -1600,18 +1600,18 @@
         ],
         "iamRoleStatements": [
           {
-            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"DeletePostIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
+            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"DeleteGeneticCodeIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
           }
         ],
         "package": {},
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "DeletePostLambdaVersionrbKIVnCsETZy9MHMY3XiXxzmoK0iNKRm8Qm3Q0b1O8"
+        "versionLogicalId": "DeleteGeneticCodeLambdaVersionddOnArFkSu3Wb6hszYDO6dLKHgdsvXp3Myfioe5sgZw"
       },
-      "getAllPosts": {
-        "handler": "api.getAllPosts",
-        "name": "get-all-posts",
+      "getAllGeneticCodes": {
+        "handler": "api.getAllGeneticCodes",
+        "name": "get-all-geneticCodes",
         "memorySize": 128,
         "timeout": 5,
         "events": [
@@ -1625,31 +1625,31 @@
         ],
         "iamRoleStatements": [
           {
-            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"GetAllPostsIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
+            "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"GetAllGeneticCodesIamRoleLambdaExecution\"][\"Properties\"][\"Policies\"][0][\"PolicyDocument\"][\"Statement\"][1]"
           }
         ],
         "package": {},
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetAllPostsLambdaVersion0rbZw17OBAFP5xx0LRZEygQcQDcL64b7ASsJl7O1X2A"
+        "versionLogicalId": "GetAllGeneticCodesLambdaVersionmfU1SBXwVPfcLDHDyQGtYrtNiyILppo87le4WE"
       }
     },
     "resources": {
       "Resources": {
-        "PostsTable": {
+        "GeneticCodesTable": {
           "Type": "AWS::DynamoDB::Table",
           "Properties": {
-            "TableName": "posts-table-dev",
+            "TableName": "geneticCodes-table-dev",
             "AttributeDefinitions": [
               {
-                "AttributeName": "postId",
+                "AttributeName": "geneticSequence",
                 "AttributeType": "S"
               }
             ],
             "KeySchema": [
               {
-                "AttributeName": "postId",
+                "AttributeName": "geneticSequence",
                 "KeyType": "HASH"
               }
             ],
@@ -1686,7 +1686,7 @@
     "artifact": "/mnt/c/Users/steff/Documents/MyProjects/rest-apis/rest-api-mutant/.serverless/dynamodb-crud-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/dynamodb-crud-api/dev/1648041012312-2022-03-23T13:10:12.312Z",
+    "artifactDirectoryName": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z",
     "artifact": "dynamodb-crud-api.zip"
   }
 }
