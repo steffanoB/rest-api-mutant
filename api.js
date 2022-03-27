@@ -38,12 +38,21 @@ const getGeneticCode = async (event) => {
 };
 
 const createGeneticCode = async (event) => {
-    const response = { statusCode: 200 };
+    
+    // send to logic!!
+    isMutant = validateGenticCode => validateGenticCode(body);
+    if (isMutant)
+    {
+        const response = { statusCode: 200 };
+    }
+    else
+    {
+        const response = { statusCode: 403 };
+    }
+    
 
     try {
         const body = JSON.parse(event.body);
-        // send to logic!!
-        
         const params = {
             TableName: process.env.DYNAMODB_TABLE_NAME,
             Item: marshall(body || {}),

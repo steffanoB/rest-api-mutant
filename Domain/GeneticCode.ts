@@ -103,4 +103,5 @@ class GeneticCode {
             lenthSequence = lenthSequence++;
         }
         return validSequence && lenthSequence >= 3;
+    }
 }

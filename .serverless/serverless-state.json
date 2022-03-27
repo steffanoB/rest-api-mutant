@@ -224,7 +224,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648344658846-2022-03-27T01:30:58.846Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.getGeneticCode",
               "Runtime": "nodejs14.x",
@@ -255,7 +255,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648344658846-2022-03-27T01:30:58.846Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.createGeneticCode",
               "Runtime": "nodejs14.x",
@@ -286,7 +286,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648344658846-2022-03-27T01:30:58.846Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.updateGeneticCode",
               "Runtime": "nodejs14.x",
@@ -317,7 +317,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648344658846-2022-03-27T01:30:58.846Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.deleteGeneticCode",
               "Runtime": "nodejs14.x",
@@ -348,7 +348,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z/dynamodb-crud-api.zip"
+                "S3Key": "serverless/dynamodb-crud-api/dev/1648344658846-2022-03-27T01:30:58.846Z/dynamodb-crud-api.zip"
               },
               "Handler": "api.getAllGeneticCodes",
               "Runtime": "nodejs14.x",
@@ -372,54 +372,54 @@
               "GetAllGeneticCodesLogGroup"
             ]
           },
-          "GetGeneticCodeLambdaVersioncmvmUtx6chpiW2LFGjVbe6dXiBaxnCybOig4MjRus4": {
+          "GetGeneticCodeLambdaVersionG6LmBkgAd1xGLyWU2Px3Ccx2bdIdfDHn6ala7WdjJc": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetGeneticCodeLambdaFunction"
               },
-              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
+              "CodeSha256": "niafbWEmBy5V6crlu8WOZqjccsjS5+kq8Cipd8Qo7bc="
             }
           },
-          "CreateGeneticCodeeLambdaVersionRixf8BrhC8IwJ3Wiio4Sx9uB9GRagqRb3w6jOzXKfg": {
+          "CreateGeneticCodeeLambdaVersionJ428EmcSvty4Oymfmwx5uEODMw071AoNgLVredVljg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateGeneticCodeeLambdaFunction"
               },
-              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
+              "CodeSha256": "niafbWEmBy5V6crlu8WOZqjccsjS5+kq8Cipd8Qo7bc="
             }
           },
-          "UpdateGeneticCodeLambdaVersiony4ezcRPbUlcGR7hyAH6HgqYwt51D5dAkQkcyYqNZzBo": {
+          "UpdateGeneticCodeLambdaVersion7EfmrCb2iD9eMjx9GDTex7U2urHdZfBeOkA6T7Q": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateGeneticCodeLambdaFunction"
               },
-              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
+              "CodeSha256": "niafbWEmBy5V6crlu8WOZqjccsjS5+kq8Cipd8Qo7bc="
             }
           },
-          "DeleteGeneticCodeLambdaVersionddOnArFkSu3Wb6hszYDO6dLKHgdsvXp3Myfioe5sgZw": {
+          "DeleteGeneticCodeLambdaVersionYaTtXpFlFNDUvtvFhFFJIDNmVT6OMAZqw9X5yeabc": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteGeneticCodeLambdaFunction"
               },
-              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
+              "CodeSha256": "niafbWEmBy5V6crlu8WOZqjccsjS5+kq8Cipd8Qo7bc="
             }
           },
-          "GetAllGeneticCodesLambdaVersionmfU1SBXwVPfcLDHDyQGtYrtNiyILppo87le4WE": {
+          "GetAllGeneticCodesLambdaVersionjjWESl00zOuFKVKXW8zePDoFo5igG2UVaO390VH0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllGeneticCodesLambdaFunction"
               },
-              "CodeSha256": "6Qd4jULWrRxS43kaCm1ueWLh/0lDOku9NeZBGYVlTFg="
+              "CodeSha256": "niafbWEmBy5V6crlu8WOZqjccsjS5+kq8Cipd8Qo7bc="
             }
           },
           "ApiGatewayRestApi": {
@@ -706,7 +706,7 @@
               "GetAllGeneticCodesLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1648341803176": {
+          "ApiGatewayDeployment1648344654937": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1347,7 +1347,7 @@
           "GetGeneticCodeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetGeneticCodeLambdaVersioncmvmUtx6chpiW2LFGjVbe6dXiBaxnCybOig4MjRus4"
+              "Ref": "GetGeneticCodeLambdaVersionG6LmBkgAd1xGLyWU2Px3Ccx2bdIdfDHn6ala7WdjJc"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-GetGeneticCodeLambdaFunctionQualifiedArn"
@@ -1356,7 +1356,7 @@
           "CreateGeneticCodeeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateGeneticCodeeLambdaVersionRixf8BrhC8IwJ3Wiio4Sx9uB9GRagqRb3w6jOzXKfg"
+              "Ref": "CreateGeneticCodeeLambdaVersionJ428EmcSvty4Oymfmwx5uEODMw071AoNgLVredVljg"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-CreateGeneticCodeeLambdaFunctionQualifiedArn"
@@ -1365,7 +1365,7 @@
           "UpdateGeneticCodeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateGeneticCodeLambdaVersiony4ezcRPbUlcGR7hyAH6HgqYwt51D5dAkQkcyYqNZzBo"
+              "Ref": "UpdateGeneticCodeLambdaVersion7EfmrCb2iD9eMjx9GDTex7U2urHdZfBeOkA6T7Q"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-UpdateGeneticCodeLambdaFunctionQualifiedArn"
@@ -1374,7 +1374,7 @@
           "DeleteGeneticCodeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteGeneticCodeLambdaVersionddOnArFkSu3Wb6hszYDO6dLKHgdsvXp3Myfioe5sgZw"
+              "Ref": "DeleteGeneticCodeLambdaVersionYaTtXpFlFNDUvtvFhFFJIDNmVT6OMAZqw9X5yeabc"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-DeleteGeneticCodeLambdaFunctionQualifiedArn"
@@ -1383,7 +1383,7 @@
           "GetAllGeneticCodesLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllGeneticCodesLambdaVersionmfU1SBXwVPfcLDHDyQGtYrtNiyILppo87le4WE"
+              "Ref": "GetAllGeneticCodesLambdaVersionjjWESl00zOuFKVKXW8zePDoFo5igG2UVaO390VH0"
             },
             "Export": {
               "Name": "sls-dynamodb-crud-api-dev-GetAllGeneticCodesLambdaFunctionQualifiedArn"
@@ -1532,7 +1532,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetGeneticCodeLambdaVersioncmvmUtx6chpiW2LFGjVbe6dXiBaxnCybOig4MjRus4"
+        "versionLogicalId": "GetGeneticCodeLambdaVersionG6LmBkgAd1xGLyWU2Px3Ccx2bdIdfDHn6ala7WdjJc"
       },
       "createGeneticCodee": {
         "handler": "api.createGeneticCode",
@@ -1557,7 +1557,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "CreateGeneticCodeeLambdaVersionRixf8BrhC8IwJ3Wiio4Sx9uB9GRagqRb3w6jOzXKfg"
+        "versionLogicalId": "CreateGeneticCodeeLambdaVersionJ428EmcSvty4Oymfmwx5uEODMw071AoNgLVredVljg"
       },
       "updateGeneticCode": {
         "handler": "api.updateGeneticCode",
@@ -1582,7 +1582,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "UpdateGeneticCodeLambdaVersiony4ezcRPbUlcGR7hyAH6HgqYwt51D5dAkQkcyYqNZzBo"
+        "versionLogicalId": "UpdateGeneticCodeLambdaVersion7EfmrCb2iD9eMjx9GDTex7U2urHdZfBeOkA6T7Q"
       },
       "deleteGeneticCode": {
         "handler": "api.deleteGeneticCode",
@@ -1607,7 +1607,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "DeleteGeneticCodeLambdaVersionddOnArFkSu3Wb6hszYDO6dLKHgdsvXp3Myfioe5sgZw"
+        "versionLogicalId": "DeleteGeneticCodeLambdaVersionYaTtXpFlFNDUvtvFhFFJIDNmVT6OMAZqw9X5yeabc"
       },
       "getAllGeneticCodes": {
         "handler": "api.getAllGeneticCodes",
@@ -1632,7 +1632,7 @@
         "memory": 128,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetAllGeneticCodesLambdaVersionmfU1SBXwVPfcLDHDyQGtYrtNiyILppo87le4WE"
+        "versionLogicalId": "GetAllGeneticCodesLambdaVersionjjWESl00zOuFKVKXW8zePDoFo5igG2UVaO390VH0"
       }
     },
     "resources": {
@@ -1686,7 +1686,7 @@
     "artifact": "/mnt/c/Users/steff/Documents/MyProjects/rest-apis/rest-api-mutant/.serverless/dynamodb-crud-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/dynamodb-crud-api/dev/1648341807052-2022-03-27T00:43:27.052Z",
+    "artifactDirectoryName": "serverless/dynamodb-crud-api/dev/1648344658846-2022-03-27T01:30:58.846Z",
     "artifact": "dynamodb-crud-api.zip"
   }
 }
